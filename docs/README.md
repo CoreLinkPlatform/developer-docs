@@ -2,7 +2,7 @@
 
 | Docs version | Contract target | Status | Entry point |
 | --- | --- | --- | --- |
-| v1 | `corelink-public-v1.yaml` `1.0.0-draft` | Alpha documentation for a draft public boundary | [v1](v1/README.md) |
+| v1 | `corelink-public-v1.yaml` `1.0.0-draft` | Alpha docs + contract-backed quickstart | [v1](v1/README.md) · [30-minute quickstart](v1/quickstart.md) |
 
 ## Versioning policy
 
