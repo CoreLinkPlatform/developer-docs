@@ -14,7 +14,7 @@ boundary until separately reviewed.
 | --- | --- | --- |
 | Public Device + Command API | Alpha / draft | [Public OpenAPI](https://github.com/CoreLinkPlatform/api-contracts/blob/main/openapi/corelink-public-v1.yaml) |
 | Event envelope | Alpha / draft | [AsyncAPI](https://github.com/CoreLinkPlatform/api-contracts/blob/main/asyncapi/corelink-events-v1.yaml) |
-| Authentication and tenant scope | Planned documentation | Contract security definitions + runtime evidence |
+| Authentication and tenant scope | Alpha quickstart | [30-minute quickstart](quickstart.md) + contract security definitions |
 | TypeScript SDK | Prerelease Alpha | [sdk-typescript](https://github.com/CoreLinkPlatform/sdk-typescript) |
 | Python SDK | Prerelease Alpha | [sdk-python](https://github.com/CoreLinkPlatform/sdk-python) |
 | Java SDK | Scaffold / Planned | [sdk-java](https://github.com/CoreLinkPlatform/sdk-java) |
@@ -25,8 +25,10 @@ boundary until separately reviewed.
 ## Navigation contract
 
 ### 1. Start here
-Concepts, authentication, tenant isolation, canonical identifiers and first
-verified API call. Content beyond the linked contract is **Planned**.
+Begin with the [30-minute v1 quickstart](quickstart.md) for bearer authentication,
+tenant scoping, Device and Command calls, idempotency, failure handling and a
+repeatable acceptance record. Content beyond the linked Device/Command contract
+is **Planned**.
 
 ### 2. Guides
 Device registration/lifecycle and commands are first because they are in the

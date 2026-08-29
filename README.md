@@ -10,6 +10,8 @@ define the public API/event boundary.
 - [Documentation index](docs/README.md)
 - [v1 documentation](docs/v1/README.md) — targets the current `1.0.0-draft`
   public Device and Command contract and canonical event envelope.
+- [30-minute v1 quickstart](docs/v1/quickstart.md) — bearer auth, tenant scope,
+  Device creation/read and idempotent Command submission using the public contract.
 
 CoreLink v1 is not a Stable release. TypeScript and Python clients are
 prerelease; Java SDK, CLI, MCP server and mock server remain Scaffold/Planned.

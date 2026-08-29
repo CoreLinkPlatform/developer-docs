@@ -20,8 +20,12 @@ jobs:
           test -s README.md
           test -s docs/README.md
           test -s docs/v1/README.md
+          test -s docs/v1/quickstart.md
           grep -Fq '1.0.0-draft' docs/v1/README.md
           grep -Fq 'corelink_device_id' docs/v1/README.md
+          grep -Fq 'Authorization: Bearer $CORELINK_ACCESS_TOKEN' docs/v1/quickstart.md
+          grep -Fq 'Idempotency-Key: $CORELINK_IDEMPOTENCY_KEY' docs/v1/quickstart.md
+          grep -Fq '/api/v1/tenants/$CORELINK_TENANT_ID/devices' docs/v1/quickstart.md
           if grep -Fq 'API contract repository also has unpopulated' README.md; then
             echo "stale API-contract status returned" >&2
             exit 1
