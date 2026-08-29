@@ -1,64 +1,61 @@
 # CoreLink v1 developer documentation
 
-**Maturity: Alpha documentation / draft contract**
+**Maturity: Alpha documentation / `1.0.0-draft` public contract**
 
-This tree targets the API Contracts repository's immutable
-`v1.0.0-draft` baseline. The reviewed public slice currently covers **Device**
-and **Command** resources plus a canonical event envelope. Tenant provisioning,
-integration callbacks and privileged administration are outside the public v1
-boundary until separately reviewed.
+This tree targets the current public contract baseline. The reviewed public slice covers **Device** and **Command** resources plus a canonical event envelope. Broader telemetry/location, partner/webhook and developer-tool surfaces remain maturity-gated and are labeled explicitly below.
 
 ## Start here
 
-| Topic | Status | Source |
+1. [30-minute quickstart](quickstart.md) — bearer authentication, tenant scope, Device read/create and idempotent Command submission.
+2. [Architecture](concepts/architecture.md) — CoreLink-owned public boundary and provider independence.
+3. [Authentication and tenant context](concepts/tenancy-authentication.md) — auth, tenant scope and safe credential handling.
+
+## Guides
+
+- [Devices and commands](guides/devices-and-commands.md) — **Alpha / current draft public slice**.
+- [Telemetry, location and events](guides/telemetry-location-events.md) — **work in progress; API/runtime gates remain open**.
+- [Webhooks and partner operations](guides/webhooks-and-partner-operations.md) — **Planned/Alpha expansion; exact public endpoints/signatures remain contract-gated**.
+
+## SDKs
+
+- [TypeScript SDK](sdks/typescript.md) — **Prerelease Alpha**.
+- [Python SDK](sdks/python.md) — **Prerelease Alpha**.
+- Java SDK is **Scaffold/Planned**; see [developer tool maturity](tools/developer-tools.md).
+
+## Developer tools
+
+[Java SDK, CLI, mock server and MCP status](tools/developer-tools.md) documents current Scaffold/Planned boundaries and the backlog gates required before installation/support instructions are valid.
+
+## Operations
+
+- [Errors, retries and idempotency](operations/errors-retries-idempotency.md)
+- [Troubleshooting](operations/troubleshooting.md)
+
+## Reference
+
+- [Compatibility](reference/compatibility.md)
+- [Maturity vocabulary](reference/maturity.md)
+- Normative contract compatibility/terminology: [`api-contracts/docs`](https://github.com/CoreLinkPlatform/api-contracts/tree/main/docs)
+
+## Current surface matrix
+
+| Surface | Current maturity | Authoritative source |
 | --- | --- | --- |
-| Public Device + Command API | Alpha / draft | [Public OpenAPI](https://github.com/CoreLinkPlatform/api-contracts/blob/main/openapi/corelink-public-v1.yaml) |
-| Event envelope | Alpha / draft | [AsyncAPI](https://github.com/CoreLinkPlatform/api-contracts/blob/main/asyncapi/corelink-events-v1.yaml) |
-| Authentication and tenant scope | Alpha quickstart | [30-minute quickstart](quickstart.md) + contract security definitions |
+| Public Device + Command API | Alpha / `1.0.0-draft` | [Public OpenAPI](https://github.com/CoreLinkPlatform/api-contracts/blob/main/openapi/corelink-public-v1.yaml) |
+| Canonical event envelope | Alpha / draft | [AsyncAPI](https://github.com/CoreLinkPlatform/api-contracts/blob/main/asyncapi/corelink-events-v1.yaml) |
 | TypeScript SDK | Prerelease Alpha | [sdk-typescript](https://github.com/CoreLinkPlatform/sdk-typescript) |
 | Python SDK | Prerelease Alpha | [sdk-python](https://github.com/CoreLinkPlatform/sdk-python) |
+| CoreLink Console | Alpha | [Console](https://github.com/CoreLinkPlatform/Console) |
 | Java SDK | Scaffold / Planned | [sdk-java](https://github.com/CoreLinkPlatform/sdk-java) |
 | CLI | Scaffold / Planned | [cli](https://github.com/CoreLinkPlatform/cli) |
 | MCP server | Scaffold / Planned | [mcp-server](https://github.com/CoreLinkPlatform/mcp-server) |
 | Mock server | Scaffold / Planned | [mock-server](https://github.com/CoreLinkPlatform/mock-server) |
 
-## Navigation contract
-
-### 1. Start here
-Begin with the [30-minute v1 quickstart](quickstart.md) for bearer authentication,
-tenant scoping, Device and Command calls, idempotency, failure handling and a
-repeatable acceptance record. Content beyond the linked Device/Command contract
-is **Planned**.
-
-### 2. Guides
-Device registration/lifecycle and commands are first because they are in the
-current public draft. Telemetry, digital twin, webhooks and integrations remain
-**Planned** until their public contracts and runtime parity are evidenced.
-
-### 3. How-to
-Partner/operator procedures will be added only with reproducible prerequisites,
-failure handling and test evidence.
-
-### 4. Reference
-Use the versioned files in
-[`api-contracts`](https://github.com/CoreLinkPlatform/api-contracts). This
-repository explains usage; it does not fork schema definitions.
-
-### 5. SDKs and tools
-TypeScript/Python are generated prerelease clients. Other tool repositories are
-not installable supported releases today.
-
-### 6. Examples
-Examples must pin their contract baseline and tested runtime/SDK version.
-
-### 7. Operations
-Release/migration/troubleshooting material must name its owner, rollback or
-recovery path, and evidence when applicable.
-
-## Contract rules carried into docs
+## Documentation contract
 
 - Public device identity is `corelink_device_id`.
-- Provider/connector identifiers are implementation details.
-- Every state-changing example must describe tenant scope, authorization,
-  idempotency and expected problem responses.
-- A draft or scaffold is never described as Stable/supported.
+- Provider/connector identifiers are implementation details, not public resource identities.
+- State-changing examples document tenant scope, authorization, idempotency and expected failures.
+- Normative schemas are linked from `api-contracts`, not forked into prose.
+- Draft/scaffold content is never described as Stable.
+- Implementation, deployment and Product Acceptance are distinct evidence states.
