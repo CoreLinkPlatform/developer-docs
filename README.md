@@ -12,7 +12,7 @@ Developer-facing documentation for using CoreLink safely and consistently. Versi
 - [Compatibility](docs/v1/reference/compatibility.md)
 - [Maturity vocabulary](docs/v1/reference/maturity.md)
 
-CoreLink v1 is not Stable. The public Device/Command contract is `1.0.0-draft`; TypeScript/Python clients are prerelease Alpha; Console is Alpha; Java SDK, CLI, MCP server and mock server remain Scaffold/Planned.
+CoreLink v1 is not Stable. The public Device/Command contract is `1.0.0-draft`; TypeScript/Python clients are prerelease Alpha with immutable tagged-contract regeneration evidence; Java has an Experimental generated Java 17+ baseline but no supported public artifact; Console is Alpha; CLI, MCP server and mock server remain Scaffold/Planned. Control is a private operator surface and is not part of the public developer API contract.
 
 ## Documentation model
 
@@ -46,4 +46,4 @@ English is the normative developer-doc language for the current v1 tree. Persian
 - Product direction and milestone acceptance: [`product-planning`](https://github.com/CoreLinkPlatform/product-planning)
 - Organization maturity/security/support/release policy: [`.github`](https://github.com/CoreLinkPlatform/.github)
 - Normative API/event schemas: [`api-contracts`](https://github.com/CoreLinkPlatform/api-contracts)
-- Implementation/deployment details: the owning repository (`platform`, `Console`, SDK/tool repositories, website)
+- Implementation/deployment details: the owning repository (`platform`, `Console`, `Control`, SDK/tool repositories, website)
