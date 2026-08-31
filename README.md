@@ -1,5 +1,10 @@
 # CoreLink Developer Documentation
 
+[![Documentation](https://github.com/CoreLinkPlatform/developer-docs/actions/workflows/documentation.yml/badge.svg?branch=main)](https://github.com/CoreLinkPlatform/developer-docs/actions/workflows/documentation.yml)
+[![Docs: v1](https://img.shields.io/badge/docs-v1-blue)](docs/v1/README.md)
+[![Contract: 1.0.0-draft](https://img.shields.io/badge/contract-1.0.0--draft-orange)](https://github.com/CoreLinkPlatform/api-contracts)
+[![Maturity: Pre-Stable](https://img.shields.io/badge/maturity-pre--stable-orange)](https://github.com/CoreLinkPlatform/.github/blob/main/REPOSITORY_MATURITY.md)
+
 Developer-facing documentation for using CoreLink safely and consistently. Versioned contracts in [`api-contracts`](https://github.com/CoreLinkPlatform/api-contracts) define normative public API/event boundaries; this repository explains how developers use them without creating a second schema source of truth.
 
 ## Start here
